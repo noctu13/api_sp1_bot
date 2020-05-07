@@ -29,8 +29,8 @@ def get_homework_statuses(current_timestamp):
 
 
 def send_message(message):
-    proxy = telegram.utils.request.Request(proxy_url='socks5://109.194.175.135:9050')
-    bot = telegram.Bot(token=TELEGRAM_TOKEN, request=proxy)
+    #proxy = telegram.utils.request.Request(proxy_url='socks5://109.194.175.135:9050')
+    bot = telegram.Bot(token=TELEGRAM_TOKEN)
     return bot.send_message(chat_id=CHAT_ID, text=message)
 
 
